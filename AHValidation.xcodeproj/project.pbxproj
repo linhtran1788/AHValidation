@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80FA9706151EDA0C00157582 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9705151EDA0C00157582 /* UIKit.framework */; };
+		80FA9708151EDA0C00157582 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9707151EDA0C00157582 /* Foundation.framework */; };
+		80FA970A151EDA0C00157582 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9709151EDA0C00157582 /* CoreGraphics.framework */; };
+		80FA9710151EDA0C00157582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80FA970E151EDA0C00157582 /* InfoPlist.strings */; };
+		80FA9712151EDA0C00157582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9711151EDA0C00157582 /* main.m */; };
+		80FA9716151EDA0C00157582 /* AHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9715151EDA0C00157582 /* AHAppDelegate.m */; };
+		80FA971E151EDA0C00157582 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA971D151EDA0C00157582 /* SenTestingKit.framework */; };
+		80FA971F151EDA0C00157582 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9705151EDA0C00157582 /* UIKit.framework */; };
+		80FA9720151EDA0C00157582 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9707151EDA0C00157582 /* Foundation.framework */; };
+		80FA9728151EDA0C00157582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80FA9726151EDA0C00157582 /* InfoPlist.strings */; };
+		80FA972B151EDA0C00157582 /* AHValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA972A151EDA0C00157582 /* AHValidationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80FA9721151EDA0C00157582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FA96F8151EDA0C00157582 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FA9700151EDA0C00157582;
+			remoteInfo = AHValidation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80FA9701151EDA0C00157582 /* AHValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FA9705151EDA0C00157582 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80FA9707151EDA0C00157582 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80FA9709151EDA0C00157582 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80FA970D151EDA0C00157582 /* AHValidation-Info.plist */ = {isa = PBXFileReference; path = "AHValidation-Info.plist"; sourceTree = "<group>"; };
+		80FA970F151EDA0C00157582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80FA9711151EDA0C00157582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80FA9713151EDA0C00157582 /* AHValidation-Prefix.pch */ = {isa = PBXFileReference; path = "AHValidation-Prefix.pch"; sourceTree = "<group>"; };
+		80FA9714151EDA0C00157582 /* AHAppDelegate.h */ = {isa = PBXFileReference; path = AHAppDelegate.h; sourceTree = "<group>"; };
+		80FA9715151EDA0C00157582 /* AHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHAppDelegate.m; sourceTree = "<group>"; };
+		80FA971C151EDA0C00157582 /* AHValidationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHValidationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FA971D151EDA0C00157582 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		80FA9725151EDA0C00157582 /* AHValidationTests-Info.plist */ = {isa = PBXFileReference; path = "AHValidationTests-Info.plist"; sourceTree = "<group>"; };
+		80FA9727151EDA0C00157582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80FA9729151EDA0C00157582 /* AHValidationTests.h */ = {isa = PBXFileReference; path = AHValidationTests.h; sourceTree = "<group>"; };
+		80FA972A151EDA0C00157582 /* AHValidationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHValidationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80FA96FE151EDA0C00157582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA9706151EDA0C00157582 /* UIKit.framework in Frameworks */,
+				80FA9708151EDA0C00157582 /* Foundation.framework in Frameworks */,
+				80FA970A151EDA0C00157582 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FA9718151EDA0C00157582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA971E151EDA0C00157582 /* SenTestingKit.framework in Frameworks */,
+				80FA971F151EDA0C00157582 /* UIKit.framework in Frameworks */,
+				80FA9720151EDA0C00157582 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80FA96F6151EDA0C00157582 = {
+			isa = PBXGroup;
+			children = (
+				80FA970B151EDA0C00157582 /* AHValidation */,
+				80FA9723151EDA0C00157582 /* AHValidationTests */,
+				80FA9704151EDA0C00157582 /* Frameworks */,
+				80FA9702151EDA0C00157582 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80FA9702151EDA0C00157582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80FA9701151EDA0C00157582 /* AHValidation.app */,
+				80FA971C151EDA0C00157582 /* AHValidationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80FA9704151EDA0C00157582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80FA9705151EDA0C00157582 /* UIKit.framework */,
+				80FA9707151EDA0C00157582 /* Foundation.framework */,
+				80FA9709151EDA0C00157582 /* CoreGraphics.framework */,
+				80FA971D151EDA0C00157582 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80FA970B151EDA0C00157582 /* AHValidation */ = {
+			isa = PBXGroup;
+			children = (
+				80FA9714151EDA0C00157582 /* AHAppDelegate.h */,
+				80FA9715151EDA0C00157582 /* AHAppDelegate.m */,
+				80FA970C151EDA0C00157582 /* Supporting Files */,
+			);
+			path = AHValidation;
+			sourceTree = "<group>";
+		};
+		80FA970C151EDA0C00157582 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80FA970D151EDA0C00157582 /* AHValidation-Info.plist */,
+				80FA970E151EDA0C00157582 /* InfoPlist.strings */,
+				80FA9711151EDA0C00157582 /* main.m */,
+				80FA9713151EDA0C00157582 /* AHValidation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80FA9723151EDA0C00157582 /* AHValidationTests */ = {
+			isa = PBXGroup;
+			children = (
+				80FA9729151EDA0C00157582 /* AHValidationTests.h */,
+				80FA972A151EDA0C00157582 /* AHValidationTests.m */,
+				80FA9724151EDA0C00157582 /* Supporting Files */,
+			);
+			path = AHValidationTests;
+			sourceTree = "<group>";
+		};
+		80FA9724151EDA0C00157582 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80FA9725151EDA0C00157582 /* AHValidationTests-Info.plist */,
+				80FA9726151EDA0C00157582 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80FA9700151EDA0C00157582 /* AHValidation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FA972E151EDA0C00157582 /* Build configuration list for PBXNativeTarget "AHValidation" */;
+			buildPhases = (
+				80FA96FD151EDA0C00157582 /* Sources */,
+				80FA96FE151EDA0C00157582 /* Frameworks */,
+				80FA96FF151EDA0C00157582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AHValidation;
+			productName = AHValidation;
+			productReference = 80FA9701151EDA0C00157582 /* AHValidation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80FA971B151EDA0C00157582 /* AHValidationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FA9731151EDA0C00157582 /* Build configuration list for PBXNativeTarget "AHValidationTests" */;
+			buildPhases = (
+				80FA9717151EDA0C00157582 /* Sources */,
+				80FA9718151EDA0C00157582 /* Frameworks */,
+				80FA9719151EDA0C00157582 /* Resources */,
+				80FA971A151EDA0C00157582 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80FA9722151EDA0C00157582 /* PBXTargetDependency */,
+			);
+			name = AHValidationTests;
+			productName = AHValidationTests;
+			productReference = 80FA971C151EDA0C00157582 /* AHValidationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80FA96F8151EDA0C00157582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AH;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 80FA96FB151EDA0C00157582 /* Build configuration list for PBXProject "AHValidation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80FA96F6151EDA0C00157582;
+			productRefGroup = 80FA9702151EDA0C00157582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80FA9700151EDA0C00157582 /* AHValidation */,
+				80FA971B151EDA0C00157582 /* AHValidationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80FA96FF151EDA0C00157582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA9710151EDA0C00157582 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FA9719151EDA0C00157582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA9728151EDA0C00157582 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80FA971A151EDA0C00157582 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80FA96FD151EDA0C00157582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA9712151EDA0C00157582 /* main.m in Sources */,
+				80FA9716151EDA0C00157582 /* AHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FA9717151EDA0C00157582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FA972B151EDA0C00157582 /* AHValidationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80FA9722151EDA0C00157582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80FA9700151EDA0C00157582 /* AHValidation */;
+			targetProxy = 80FA9721151EDA0C00157582 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80FA970E151EDA0C00157582 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80FA970F151EDA0C00157582 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		80FA9726151EDA0C00157582 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80FA9727151EDA0C00157582 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80FA972C151EDA0C00157582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80FA972D151EDA0C00157582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80FA972F151EDA0C00157582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHValidation/AHValidation-Prefix.pch";
+				INFOPLIST_FILE = "AHValidation/AHValidation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		80FA9730151EDA0C00157582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHValidation/AHValidation-Prefix.pch";
+				INFOPLIST_FILE = "AHValidation/AHValidation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		80FA9732151EDA0C00157582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHValidation.app/AHValidation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHValidation/AHValidation-Prefix.pch";
+				INFOPLIST_FILE = "AHValidationTests/AHValidationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		80FA9733151EDA0C00157582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHValidation.app/AHValidation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHValidation/AHValidation-Prefix.pch";
+				INFOPLIST_FILE = "AHValidationTests/AHValidationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80FA96FB151EDA0C00157582 /* Build configuration list for PBXProject "AHValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FA972C151EDA0C00157582 /* Debug */,
+				80FA972D151EDA0C00157582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80FA972E151EDA0C00157582 /* Build configuration list for PBXNativeTarget "AHValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FA972F151EDA0C00157582 /* Debug */,
+				80FA9730151EDA0C00157582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80FA9731151EDA0C00157582 /* Build configuration list for PBXNativeTarget "AHValidationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FA9732151EDA0C00157582 /* Debug */,
+				80FA9733151EDA0C00157582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80FA96F8151EDA0C00157582 /* Project object */;
+}
