@@ -10,17 +10,18 @@
 
 @implementation AHValidationRule
 
-@synthesize name;
+@synthesize object, keyPath, failureMessage;
 
-- (id)initWithField:(NSString *)aName {
+- (id)initWithObject:(id)obj keyPath:(NSString *)aKeyPath message:(NSString *)message {
 	if((self = [super init])) {
-		name = aName;
+		object = obj;
+		keyPath = aKeyPath;
+		failureMessage = message;
 	}
 	return self;
 }
 
-- (BOOL)passesForValue:(id)value message:(NSString **)message {
-	*message = nil;
+- (BOOL)passes {
 	return YES;
 }
 

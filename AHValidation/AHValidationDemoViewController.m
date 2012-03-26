@@ -8,7 +8,6 @@
 
 #import "AHValidationDemoViewController.h"
 #import "AHValidation.h"
-#import "UITextField+Validation.h"
 
 @implementation AHValidationDemoViewController
 
@@ -24,17 +23,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	[AHStringLengthRule addNonemptyStringRuleToObject:self.textField keyPath:@"text" message:@"Username cannot be empty"];
+	[AHStringLengthRule addRuleToObject:self.textField keyPath:@"text" minLength:nil maxLength:[NSNumber numberWithInteger:50] message:@"Username must be fewer than 50 characters"];
 
-	[self.textField addValidationRule:[AHStringLengthRule nonemptyStringRuleWithField:@"username"]];
-	[self.textField addValidationRule:[AHStringLengthRule ruleWithField:@"username" maxLength:50]];
+	[AHStringLengthRule addNonemptyStringRuleToObject:self.passwordField keyPath:@"text" message:@"Password cannot be empty"];
+	[AHStringLengthRule addRuleToObject:self.passwordField keyPath:@"text" minLength:nil maxLength:[NSNumber numberWithInteger:50] message:@"Password must be fewer than 50 characters"];
 	
-	[self.passwordField addValidationRule:[AHStringLengthRule nonemptyStringRuleWithField:@"password"]];
-	[self.passwordField addValidationRule:[AHStringLengthRule ruleWithField:@"password" maxLength:50]];
-	
-	[self.repeatPasswordField addValidationRule:[AHObjectEqualityRule ruleWithField:@"Repeat password" 
-																	objectToCompare:self.passwordField 
-																			keyPath:@"text" 
-																	  comparedField:@"password"]];
+	[AHObjectEqualityRule addRuleToObject:self.repeatPasswordField object:self.passwordField keyPath:@"text" message:@"Repeat password must be the same as password"];
 }
 
 - (void)viewDidUnload {

@@ -10,18 +10,14 @@
 
 @interface AHStringLengthRule : AHValidationRule
 
-@property(assign) NSInteger minLength; 
-@property(assign) NSInteger maxLength;
+@property(retain) NSNumber *minLength; 
+@property(retain) NSNumber *maxLength;
 
-+ (AHStringLengthRule *)nonemptyStringRuleWithField:(NSString *)name;
++ (void)addNonemptyStringRuleToObject:(id)obj keyPath:(NSString *)keyPath message:(NSString *)message;
 
-+ (AHStringLengthRule *)ruleWithField:(NSString *)name minLength:(NSInteger)minLength;
++ (void)addRuleToObject:(id)obj keyPath:(NSString *)keyPath minLength:(NSNumber *)minLength 
+			  maxLength:(NSNumber *)maxLength message:(NSString *)message;
 
-+ (AHStringLengthRule *)ruleWithField:(NSString *)name maxLength:(NSInteger)maxLength;
-
-+ (AHStringLengthRule *)ruleWithField:(NSString *)name minLength:(NSInteger)minLength 
-							maxLength:(NSInteger)maxLength;
-
-- (BOOL)passesForValue:(id)value message:(NSString **)message;
+- (BOOL)passes;
 
 @end

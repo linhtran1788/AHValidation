@@ -1,15 +1,14 @@
 //
-//  UITextField+Validation.h
+//  NSObject+Validation.h
 //  AHValidation
 //
 //  Created by Warren Moore on 3/25/12.
 //  Copyright (c) 2012 Auerhaus Development, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "AHValidation.h"
 
-@interface UITextField (Validation)
+@interface NSObject (Validation)
 
 @property(strong) NSMutableArray *validationRules;
 

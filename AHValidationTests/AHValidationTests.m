@@ -22,32 +22,27 @@
 }
 
 - (void)testBaseValidationRulePassesForBaseObject {
-	AHValidationRule *rule = [[AHValidationRule alloc] init];
-	AHValidationValue *value = [AHValidationValue valueNamed:@"object" withObject:[[NSObject alloc] init]];
-	NSString *message = nil;
-	STAssertTrue([rule passesForValue:value message:&message], @"Generic validation rule should pass for any object.");
+	NSDictionary *object = [NSDictionary dictionaryWithObject:@"abc" forKey:@"text"];
+	AHValidationRule *rule = [[AHValidationRule alloc] initWithObject:object keyPath:@"text" message:@"Generic validation failed"];
+	STAssertTrue([rule passes], @"Generic validation rule should pass for any object.");
 }
 
 - (void)testTooShortStringFailsLengthValidation {
-	AHStringLengthRule *rule = [AHStringLengthRule ruleWithMinimumLength:5];
-	AHValidationValue *value = [AHValidationValue valueNamed:@"string" withObject:@"abc"];
-	NSString *message = nil;
-	STAssertFalse([rule passesForValue:value message:&message], @"String with fewer characters than required should fail validation");
+	NSDictionary *object = [NSDictionary dictionaryWithObject:@"abc" forKey:@"text"];
+	[AHStringLengthRule addRuleToObject:object keyPath:@"text" minLength:[NSNumber numberWithInteger:5] maxLength:nil message:@"Text must be at least 5 characters"];
+	STAssertTrue([[object validate] count] > 0, @"String with fewer characters than required should fail validation");
 }
 
 - (void)testTooLongStringFailsLengthValidation {
-	AHStringLengthRule *rule = [AHStringLengthRule ruleWithMaximumLength:5];
-	AHValidationValue *value = [AHValidationValue valueNamed:@"string" withObject:@"abcdefghij"];
-	NSString *message = nil;
-	STAssertFalse([rule passesForValue:value message:&message], @"String with more characters than allowed should fail validation");
+	NSDictionary *object = [NSDictionary dictionaryWithObject:@"abcdefghij" forKey:@"text"];
+	[AHStringLengthRule addRuleToObject:object keyPath:@"text" minLength:nil maxLength:[NSNumber numberWithInteger:5] message:@"Text must have 5 or fewer characters"];
+	STAssertTrue([[object validate] count] > 0, @"String with more characters than allowed should fail validation");
 }
 
 - (void)testNonmatchingStringFailsRegexValidation {
-	AHRegexRule *rule = [AHRegexRule ruleWithExpression:@"abbc"];
-	STAssertNotNil(rule, @"AHRegexRule factory method should return an object");
-	AHValidationValue *value = [AHValidationValue valueNamed:@"string" withObject:@"abcd"];
-	NSString *message = nil;
-	STAssertFalse([rule passesForValue:value message:&message], @"String not matching regex should fail validation");
+	NSDictionary *object = [NSDictionary dictionaryWithObject:@"abcd" forKey:@"text"];
+	[AHRegexRule addRuleToObject:object keyPath:@"text" expression:@"abbc" message:@"Text must match the required format"];
+	STAssertTrue([[object validate] count] > 0, @"String not matching regex should fail validation");
 }
 
 @end

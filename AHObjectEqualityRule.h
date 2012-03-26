@@ -10,13 +10,8 @@
 
 @interface AHObjectEqualityRule : AHValidationRule
 
-@property(strong) id objectToCompare;
-@property(copy) NSString *keyPathToCompare;
-@property(copy) NSString *comparedObjectName;
+@property(unsafe_unretained) id objectToCompare;
 
-+ (AHObjectEqualityRule *)ruleWithField:(NSString *)name 
-						objectToCompare:(id)obj 
-								keyPath:(NSString *)keypath 
-						  comparedField:(NSString *)comparedObjectName;
++ (void)addRuleToObject:(id)obj1 object:(id)obj2 keyPath:(NSString *)keyPath message:(NSString *)message;
 
 @end

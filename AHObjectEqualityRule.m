@@ -7,43 +7,30 @@
 //
 
 #import "AHObjectEqualityRule.h"
+#import "NSObject+Validation.h"
 
 @implementation AHObjectEqualityRule
 
-@synthesize objectToCompare, keyPathToCompare, comparedObjectName;
+@synthesize objectToCompare;
 
-+ (AHObjectEqualityRule *)ruleWithField:(NSString *)name 
-						objectToCompare:(id)obj 
-								keyPath:(NSString *)keypath 
-						  comparedField:(NSString *)comparedObjectName 
-{
-	return [[self alloc] initWithField:(NSString *)name 
-					   objectToCompare:obj keyPath:keypath 
-					comparedObjectName:comparedObjectName];
++ (void)addRuleToObject:(id)obj1 object:(id)obj2 keyPath:(NSString *)keyPath message:(NSString *)message {
+	AHValidationRule *rule = [[self alloc] initWithObject:obj1 object:obj2 keyPath:keyPath message:message];
+	[obj1 addValidationRule:rule];
 }
 
-- (id)initWithField:(NSString *)name 
-	objectToCompare:(id)obj 
-			keyPath:(NSString *)keypath 
- comparedObjectName:(NSString *)comparedName 
+- (id)initWithObject:(id)obj1 
+			  object:(id)obj2 
+			 keyPath:(NSString *)aKeyPath 
+			 message:(NSString *)message 
 {
-	if((self = [super initWithField:name])) {
-		objectToCompare = obj;
-		keyPathToCompare = keypath;
-		comparedObjectName = comparedName;
+	if((self = [super initWithObject:obj1 keyPath:aKeyPath message:message])) {
+		objectToCompare = obj2;
 	}
 	return self;
 }
 
-- (BOOL)passesForValue:(id)value message:(NSString **)message {
-	id valueToCompare = [self.objectToCompare valueForKeyPath:self.keyPathToCompare];
-	if(![value isEqual:valueToCompare]) {
-		*message = [NSString stringWithFormat:@"%@ must be the same as %@", 
-					[self.name capitalizedString], self.comparedObjectName];
-		return NO;
-	}
-	
-	return YES;
+- (BOOL)passes {
+	return [[self.object valueForKey:self.keyPath] isEqual:[self.objectToCompare valueForKeyPath:self.keyPath]];
 }
 
 @end

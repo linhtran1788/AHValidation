@@ -10,9 +10,8 @@
 
 @interface AHRegexRule : AHValidationRule
 
-// The compiled regular expression object
 @property(strong) NSRegularExpression *regex;
 
-+ (AHRegexRule *)ruleWithField:(NSString *)name expression:(NSString *)expr;
++ (void)addRuleToObject:(id)obj keyPath:(NSString *)keyPath expression:(NSString *)expr message:(NSString *)message;
 
 @end

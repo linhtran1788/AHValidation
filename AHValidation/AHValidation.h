@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Auerhaus Development, LLC. All rights reserved.
 //
 
-#import "AHValidationValue.h"
 #import "AHValidationRule.h"
 #import "AHStringLengthRule.h"
 #import "AHRegexRule.h"
 #import "AHObjectEqualityRule.h"
+#import "NSObject+Validation.h"

@@ -1,17 +1,17 @@
 //
-//  UITextField+Validation.m
+//  NSObject+Validation.m
 //  AHValidation
 //
 //  Created by Warren Moore on 3/25/12.
 //  Copyright (c) 2012 Auerhaus Development, LLC. All rights reserved.
 //
 
-#import "UITextField+Validation.h"
+#import "NSObject+Validation.h"
 #import <objc/runtime.h>
 
 static char * const AHValidationRulesArrayKey = "AHValidationRulesArray";
 
-@implementation UITextField (Validation)
+@implementation NSObject (Validation)
 
 - (NSMutableArray *)validationRules {
 	NSMutableArray *rules = objc_getAssociatedObject(self, AHValidationRulesArrayKey);
@@ -42,9 +42,8 @@ static char * const AHValidationRulesArrayKey = "AHValidationRulesArray";
 - (NSArray *)validate {
 	NSMutableArray *messages = [NSMutableArray array];
 	for(AHValidationRule *rule in self.validationRules) {
-		NSString *message = nil;
-		if(![rule passesForValue:self.text message:&message])
-			[messages addObject:message];
+		if(![rule passes])
+			[messages addObject:rule.failureMessage];
 	}
 	return messages;
 }

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80B1681A1520D9B300D8A96E /* NSObject+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B168191520D9B300D8A96E /* NSObject+Validation.m */; };
 		80E23F4A151FD7E300207355 /* AHStringLengthRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F49151FD7E300207355 /* AHStringLengthRule.m */; };
 		80E23F4F151FE23A00207355 /* AHValidationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F4D151FE23A00207355 /* AHValidationDemoViewController.m */; };
 		80E23F50151FE23A00207355 /* AHValidationDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E23F4E151FE23A00207355 /* AHValidationDemoViewController.xib */; };
-		80E23F58151FE7DF00207355 /* UITextField+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F57151FE7DF00207355 /* UITextField+Validation.m */; };
 		80E23F5C15200E0500207355 /* AHRegexRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F5B15200E0500207355 /* AHRegexRule.m */; };
 		80E23F6015201B4300207355 /* AHObjectEqualityRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F5F15201B4300207355 /* AHObjectEqualityRule.m */; };
 		80FA9706151EDA0C00157582 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FA9705151EDA0C00157582 /* UIKit.framework */; };
@@ -38,14 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80B168181520D9B300D8A96E /* NSObject+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSObject+Validation.h"; path = "AHValidation/NSObject+Validation.h"; sourceTree = "<group>"; };
+		80B168191520D9B300D8A96E /* NSObject+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Validation.m"; path = "AHValidation/NSObject+Validation.m"; sourceTree = "<group>"; };
 		80E23F48151FD7E300207355 /* AHStringLengthRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHStringLengthRule.h; path = AHValidation/AHStringLengthRule.h; sourceTree = "<group>"; };
 		80E23F49151FD7E300207355 /* AHStringLengthRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHStringLengthRule.m; path = AHValidation/AHStringLengthRule.m; sourceTree = "<group>"; };
 		80E23F4B151FDB5700207355 /* AHValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AHValidation.h; path = AHValidation/AHValidation.h; sourceTree = "<group>"; };
 		80E23F4C151FE23A00207355 /* AHValidationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHValidationDemoViewController.h; sourceTree = "<group>"; };
 		80E23F4D151FE23A00207355 /* AHValidationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHValidationDemoViewController.m; sourceTree = "<group>"; };
 		80E23F4E151FE23A00207355 /* AHValidationDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHValidationDemoViewController.xib; sourceTree = "<group>"; };
-		80E23F56151FE7DF00207355 /* UITextField+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+Validation.h"; path = "AHValidation/UITextField+Validation.h"; sourceTree = "<group>"; };
-		80E23F57151FE7DF00207355 /* UITextField+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Validation.m"; path = "AHValidation/UITextField+Validation.m"; sourceTree = "<group>"; };
 		80E23F5A15200E0500207355 /* AHRegexRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHRegexRule.h; path = AHValidation/AHRegexRule.h; sourceTree = "<group>"; };
 		80E23F5B15200E0500207355 /* AHRegexRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHRegexRule.m; path = AHValidation/AHRegexRule.m; sourceTree = "<group>"; };
 		80E23F5E15201B4300207355 /* AHObjectEqualityRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHObjectEqualityRule.h; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 				80E23F49151FD7E300207355 /* AHStringLengthRule.m */,
 				80E23F5A15200E0500207355 /* AHRegexRule.h */,
 				80E23F5B15200E0500207355 /* AHRegexRule.m */,
-				80E23F56151FE7DF00207355 /* UITextField+Validation.h */,
-				80E23F57151FE7DF00207355 /* UITextField+Validation.m */,
+				80B168181520D9B300D8A96E /* NSObject+Validation.h */,
+				80B168191520D9B300D8A96E /* NSObject+Validation.m */,
 			);
 			name = AHValidation;
 			sourceTree = "<group>";
@@ -300,9 +300,9 @@
 				80FA9736151EDDD800157582 /* AHValidationRule.m in Sources */,
 				80E23F4A151FD7E300207355 /* AHStringLengthRule.m in Sources */,
 				80E23F4F151FE23A00207355 /* AHValidationDemoViewController.m in Sources */,
-				80E23F58151FE7DF00207355 /* UITextField+Validation.m in Sources */,
 				80E23F5C15200E0500207355 /* AHRegexRule.m in Sources */,
 				80E23F6015201B4300207355 /* AHObjectEqualityRule.m in Sources */,
+				80B1681A1520D9B300D8A96E /* NSObject+Validation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
