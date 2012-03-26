@@ -25,9 +25,13 @@ To retrieve the failure messages associated with any unfulfilled rules, simply c
 
 This class provides two utility methods for performing validation against the length of NSString-valued properties:
 
-`+addRuleToObject:keyPath:minLength:maxLength:message:` allows you to specify both upper and lower bounds on string length. The two numeric parameters are taken as `NSNumber`s and are optional. If either of them is missing, it is not validated against. If both of them are missing, a run-time assertion is triggered.
+`+addRuleToObject:keyPath:minLength:maxLength:message:` 
 
-`+addNonemptyStringRuleToObject:keyPath:message:` is a specialized method for attaching a rule requiring the string property to be non-empty. It is equivalent to calling the previous method with a minLength of 1 and a maxLength of nil.
+This method allows you to specify both upper and lower bounds on string length. The two numeric parameters are taken as `NSNumber`s and are optional. If either of them is missing, it is not validated against. If both of them are missing, a run-time assertion is triggered.
+
+`+addNonemptyStringRuleToObject:keyPath:message:` 
+
+This is a specialized method for attaching a rule requiring the string property to be non-empty. It is equivalent to calling the previous method with a `minLength` of 1 and a `maxLength` of `nil`.
 
 ### AHNumericRangeRule
 
@@ -35,17 +39,19 @@ This class allows one to validate that a numeric value falls inside a given (inc
 
 `+addRuleToObject:keyPath:lowerBound:upperBound:message:`
 
-The lowerBound and upperBound parameters function in much the same way as the minLength/maxLength parameters of the `AHStringLengthRule` class. If the property to be tested is not of `NSNumber` type, the class will attempt to coerce the value to a `double` by using the `doubleValue` method. If the receiving type does not implement `doubleValue`, an exception will be thrown. In general, this class should only be used to validate `NSNumber`s and strings whose contents can be correctly coerced to double type. Hopefully, this rule can be made more robust in the future.
+The lowerBound and upperBound parameters function in much the same way as the `minLength`/`maxLength` parameters of the `AHStringLengthRule` class. If the property to be tested is not of `NSNumber` type, the class will attempt to coerce the value to a `double` by using the `doubleValue` method. If the receiving type does not implement `doubleValue`, an exception will be thrown. In general, this class should only be used to validate `NSNumbers` and strings whose contents can be correctly coerced to double type. Hopefully, this rule can be made more robust in the future.
 
 ### AHRegexRule
 
 This class provides validation of string types against regexes. The rule passes if the property being tested has a match for the expression specified at rule creation time. The underlying `NSRegularExpression` object can be replaced at runtime. The class provides the following method for adding a regex rule to an object:
 
-`+addRuleToObject:keyPath:expression:message:`, where the expression parameter takes a string to be compiled into a regular expression object. The matching is currently done in a case-insensitive manner, and allows the use of special characters `^` and `$` to mark the beginning and end of line, respectively. If other matching options are required, they can be added by a subclass of this rule class.
+`+addRuleToObject:keyPath:expression:message:`
+
+The expression parameter takes a string to be compiled into a regular expression object. The matching is currently done in a case-insensitive manner, and allows the use of special characters `^` and `$` to anchor the match to the beginning and end of line, respectively. If other matching options are required, they can be added by a subclass of this rule class.
 
 ### AHObjectEqualityRule
 
-This class provides validation of equality between properties on different objects. The rule passes if the objects are equal on the basis of the first object's `isEqual:` method. If the classes are not comparable (i.e., if the second object cannot be compared to the first object using the first's `isEqual` method), the result of this rule is undefined, including the possibility of a runtime exception.
+This class provides validation of equality between properties on different objects. The rule passes if the objects are equal on the basis of the first object's `isEqual:` method. If the classes are not comparable (i.e., if the second object cannot be compared to the first object using the first's `isEqual:` method), the result of this rule is undefined, including the possibility of a runtime exception.
 
 ## Extending the Library with New Rule Types
 
@@ -68,5 +74,6 @@ The `validate` method on `NSObject` iterates over the rules associated with an o
    id value = [self.object valueForKey:self.keyPath];
    return [value hasPrefix:self.prefix];
 }
+</pre>
 
 You may wish to perform additional error checking, but this is essentially all that is required to implement a custom rule. 
