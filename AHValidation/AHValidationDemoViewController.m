@@ -11,7 +11,7 @@
 
 @implementation AHValidationDemoViewController
 
-@synthesize textField, passwordField, repeatPasswordField, validationMessageLabel, textFields;
+@synthesize textField, passwordField, repeatPasswordField, numberField, validationMessageLabel, textFields;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,13 +24,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[AHStringLengthRule addNonemptyStringRuleToObject:self.textField keyPath:@"text" message:@"Username cannot be empty"];
-	[AHStringLengthRule addRuleToObject:self.textField keyPath:@"text" minLength:nil maxLength:[NSNumber numberWithInteger:50] message:@"Username must be fewer than 50 characters"];
-
-	[AHStringLengthRule addNonemptyStringRuleToObject:self.passwordField keyPath:@"text" message:@"Password cannot be empty"];
-	[AHStringLengthRule addRuleToObject:self.passwordField keyPath:@"text" minLength:nil maxLength:[NSNumber numberWithInteger:50] message:@"Password must be fewer than 50 characters"];
+	[AHStringLengthRule addRuleToObject:self.textField 
+								keyPath:@"text" 
+							  minLength:[NSNumber numberWithInteger:3] 
+							  maxLength:[NSNumber numberWithInteger:50] 
+								message:@"Username must be between 3 and 50 characters"];
 	
-	[AHObjectEqualityRule addRuleToObject:self.repeatPasswordField object:self.passwordField keyPath:@"text" message:@"Repeat password must be the same as password"];
+	[AHStringLengthRule addRuleToObject:self.passwordField 
+								keyPath:@"text" 
+							  minLength:[NSNumber numberWithInteger:6] 
+							  maxLength:[NSNumber numberWithInteger:50] 
+								message:@"Password must be at least 6 characters"];
+	
+	[AHObjectEqualityRule addRuleToObject:self.repeatPasswordField 
+								   object:self.passwordField 
+								  keyPath:@"text" 
+								  message:@"Repeat password must be the same as password"];
+	
+	[AHNumericRangeRule addRuleToObject:self.numberField
+								keyPath:@"text" 
+							 lowerBound:[NSNumber numberWithInt:1] 
+							 upperBound:[NSNumber numberWithInt:100] 
+								message:@"Number must be between 1 and 100"];
 }
 
 - (void)viewDidUnload {
@@ -43,8 +58,9 @@
 
 - (void)performValidation {
 	NSMutableArray *messages = [NSMutableArray array];
-	for(UITextField *field in self.textFields)
+	for(UITextField *field in self.textFields) {
 		[messages addObjectsFromArray:[field validate]];
+	}
 	
 	self.validationMessageLabel.text = [messages componentsJoinedByString:@"\n"];
 }

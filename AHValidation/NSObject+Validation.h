@@ -13,7 +13,9 @@
 @property(strong) NSMutableArray *validationRules;
 
 - (void)addValidationRule:(AHValidationRule *)rule;
+
 - (void)removeValidationRule:(AHValidationRule *)rule;
+
 - (void)removeAllValidationRules;
 
 - (NSArray *)validate;

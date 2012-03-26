@@ -50,7 +50,7 @@
 	else if(self.minLength != nil)
 		return (length >= [self.minLength integerValue]);
 	else
-		return YES;
+		return NO;
 }
 
 @end

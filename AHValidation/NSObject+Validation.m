@@ -22,7 +22,7 @@ static char * const AHValidationRulesArrayKey = "AHValidationRulesArray";
 
 - (void)setValidationRules:(NSMutableArray *)validationRules {
 	objc_setAssociatedObject(self, AHValidationRulesArrayKey, 
-							 validationRules, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+							 validationRules, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (void)addValidationRule:(AHValidationRule *)rule {

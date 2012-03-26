@@ -7,7 +7,9 @@
 //
 
 #import "AHValidationRule.h"
+#import "AHValidationRule.h"
+#import "AHObjectEqualityRule.h"
+#import "AHNumericRangeRule.h"
 #import "AHStringLengthRule.h"
 #import "AHRegexRule.h"
-#import "AHObjectEqualityRule.h"
 #import "NSObject+Validation.h"

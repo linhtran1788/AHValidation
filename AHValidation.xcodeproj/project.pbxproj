@@ -10,6 +10,7 @@
 		80B1681A1520D9B300D8A96E /* NSObject+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B168191520D9B300D8A96E /* NSObject+Validation.m */; };
 		80B168211520E42600D8A96E /* AHObjectEqualityRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B168201520E42600D8A96E /* AHObjectEqualityRule.m */; };
 		80B168231520E44000D8A96E /* AHObjectEqualityRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B168201520E42600D8A96E /* AHObjectEqualityRule.m */; };
+		80B1682A1521038700D8A96E /* AHNumericRangeRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B168291521038700D8A96E /* AHNumericRangeRule.m */; };
 		80E23F4A151FD7E300207355 /* AHStringLengthRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F49151FD7E300207355 /* AHStringLengthRule.m */; };
 		80E23F4F151FE23A00207355 /* AHValidationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23F4D151FE23A00207355 /* AHValidationDemoViewController.m */; };
 		80E23F50151FE23A00207355 /* AHValidationDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E23F4E151FE23A00207355 /* AHValidationDemoViewController.xib */; };
@@ -43,6 +44,8 @@
 		80B168191520D9B300D8A96E /* NSObject+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Validation.m"; path = "AHValidation/NSObject+Validation.m"; sourceTree = "<group>"; };
 		80B1681F1520E42600D8A96E /* AHObjectEqualityRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHObjectEqualityRule.h; path = AHValidation/AHObjectEqualityRule.h; sourceTree = "<group>"; };
 		80B168201520E42600D8A96E /* AHObjectEqualityRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHObjectEqualityRule.m; path = AHValidation/AHObjectEqualityRule.m; sourceTree = "<group>"; };
+		80B168281521038700D8A96E /* AHNumericRangeRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHNumericRangeRule.h; path = AHValidation/AHNumericRangeRule.h; sourceTree = "<group>"; };
+		80B168291521038700D8A96E /* AHNumericRangeRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHNumericRangeRule.m; path = AHValidation/AHNumericRangeRule.m; sourceTree = "<group>"; };
 		80E23F48151FD7E300207355 /* AHStringLengthRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHStringLengthRule.h; path = AHValidation/AHStringLengthRule.h; sourceTree = "<group>"; };
 		80E23F49151FD7E300207355 /* AHStringLengthRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHStringLengthRule.m; path = AHValidation/AHStringLengthRule.m; sourceTree = "<group>"; };
 		80E23F4B151FDB5700207355 /* AHValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AHValidation.h; path = AHValidation/AHValidation.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				80FA9735151EDDD800157582 /* AHValidationRule.m */,
 				80B1681F1520E42600D8A96E /* AHObjectEqualityRule.h */,
 				80B168201520E42600D8A96E /* AHObjectEqualityRule.m */,
+				80B168281521038700D8A96E /* AHNumericRangeRule.h */,
+				80B168291521038700D8A96E /* AHNumericRangeRule.m */,
 				80E23F48151FD7E300207355 /* AHStringLengthRule.h */,
 				80E23F49151FD7E300207355 /* AHStringLengthRule.m */,
 				80E23F5A15200E0500207355 /* AHRegexRule.h */,
@@ -304,6 +309,7 @@
 				80E23F4F151FE23A00207355 /* AHValidationDemoViewController.m in Sources */,
 				80E23F5C15200E0500207355 /* AHRegexRule.m in Sources */,
 				80B1681A1520D9B300D8A96E /* NSObject+Validation.m in Sources */,
+				80B1682A1521038700D8A96E /* AHNumericRangeRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
