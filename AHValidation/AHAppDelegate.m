@@ -3,10 +3,11 @@
 //  AHValidation
 //
 //  Created by Warren Moore on 3/24/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Auerhaus Development, LLC. All rights reserved.
 //
 
 #import "AHAppDelegate.h"
+#import "AHValidationDemoViewController.h"
 
 @implementation AHAppDelegate
 
@@ -15,8 +16,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+
+	self.window.rootViewController = [[AHValidationDemoViewController alloc] initWithNibName:@"AHValidationDemoViewController" 
+																					  bundle:nil];
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
